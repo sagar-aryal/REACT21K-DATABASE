@@ -1,0 +1,57 @@
+Emma Example
+Tasks
+Create a folder for the project
+Write create statements for the database
+Create the database
+Write Sql statements
+1 Create a folder for the project
+Create a folder for the project. Name the folder with Example_Emma_superhero_project.
+2 Write create statements for the database
+Write create statements to create a database called superherodb.
+Create a table superhero, for superhero data. Table columns are:
+heroID integer
+name varchar(15)
+gear varchar(21)
+costume varchar(14)
+yearOfBirth integer
+All columns are mandatory. The primary key is heroID.
+Add two insert statements into the create statements for testing.
+Create user felix@localhost with password lnxE9i2J. Grant all necessary privileges to the user.
+Save all necessary create statements into a sql file Example_Emma_superhero_createStatements.sql
+3 Create the database
+Create the database with the create statements .
+4 Write Sql statements
+After each operation check the content of the database by selecting all data from the table.
+Write sql statements, with which you can insert, update, delete and select the superhero data.
+Save sql statements into project folder as a sql file named Example_Emma_superhero_sqlStatements.sql.
+Insert data to the database
+Insert following data to the superhero database
+heroID	name	gear	costume	yearOfBirth
+3	SteelFoot	MemoryEnhancer	blue	1930
+7	Rustman	JumpBoots	green	1990
+1	SuperMoron	Cape	brown	1960
+2	DataMaster	SuperArmour	red	1890
+5	SuperQL	HelmeT	orange	1905
+4	SuperGenius	Glove	data-outfit	2017
+6	Lightning	SeachEngine	memoryhelmet	2000
+Getting data
+Select all column
+Create select statement with which you get all data of the superheroes. All columns should be included in the resultset.
+Write a select statement, with which you get all data of the superheroes. Include into the resultset only the columns name, heroID, costume.
+Select with on
+Select all superheroes, where the costume is red
+Select all superheroes, where the name is SuperGenius
+Select all superheroes, where the name is SuperGenius
+Update data
+To see the efect of the operations, you might have to add some new data to the table before executing the operation.
+Update superhero (heroID is 3). New data is: gear is JumpBoots and name is SuperMoron
+Update superhero (heroID is 4). New data is: gear is HelmeT and costume is blue
+Update superhero (heroID on 6). New data is: gear is JumpBoots and yearOfBirth is 1930 and name is SuperMoron
+Update superhero (heroID on 2). New data is: yearOfBirth is 1960 and costume is blue and name is Lightning
+Delete data
+To see the efect of the operations, you might have to add some new data to the table before executing the operation.
+Delete superhero, where heroID is 5
+Delete superhero, where heroID is 2
+Delete all superheroes, where yearOfBirth is 2017
+Delete all superheroes, where gear is HelmeT or name is SuperQL
+Delete all superheroes, where yearOfBirth is 1960 or costume is red or costume is data-outfit
