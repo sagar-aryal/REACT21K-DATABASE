@@ -1,0 +1,60 @@
+Sagar Aryal
+Tasks
+Create a folder for the project
+Write create statements for the database
+Create the database
+Write Sql statements
+Submit the project
+1 Create a folder for the project
+Create a folder for the project. Name the folder with Aryal_Sagar_computer_project.
+2 Write create statements for the database
+Write create statements to create a database called computerdb.
+Create a table computer, for computer data. Table columns are:
+id integer
+name varchar(24)
+type varchar(19)
+amount integer
+processor varchar(13)
+All columns are mandatory. The primary key is id.
+Add two insert statements into the create statements for testing.
+Create user michael@localhost with password iXGPFptO. Grant all necessary privileges to the user.
+Save all necessary create statements into a sql file Aryal_Sagar_computer_createStatements.sql
+3 Create the database
+Create the database with the create statements .
+4 Write Sql statements
+After each operation check the content of the database by selecting all data from the table.
+Write sql statements, with which you can insert, update, delete and select the computer data.
+Save sql statements into project folder as a sql file named Aryal_Sagar_computer_sqlStatements.sql.
+Insert data to the database
+Insert following data to the computer database
+id	name	type	amount	processor
+2	BigFlop Mark II	gameover	20	Brain 456
+7	Cera 2400	laptop	5	Selenium II
+6	MaxEffect 2000	supercomputer	100	MotorOlè
+1	GameDelux	embedded	7	PiTron 3
+5	King 3000	server	10	MinPower
+3	Xunil 4.7	tabletop	1	BNE
+4	Beast II	pocket computer	150	X-Force
+Getting data
+Select all columns
+Create select statement with which you get all data of the computers. All columns should be included in the resultset.
+Write a select statement, with which you get all data of the computers. Include into the resultset only the columns id, amount, type.
+Select with on
+Select all computers, where the processor is Brain 456
+Select all computers, where the name is GameDelux
+Select all computers, where the name is BigFlop Mark II
+Update data
+To see the efect of the operations, you might have to add some new data to the table before executing the operation.
+Update computer (id is 1). New data is: type is pocket computer and amount is 15
+Update computer (id is 4). New data is: amount is 10 and name is GameDelux
+Update computer (id on 3). New data is: amount is 13 and processor is Brain 456 and name is MaxEffect 2000
+Update computer (id on 4). New data is: type is laptop and amount is 10 and name is BigFlop Mark II
+Delete data
+To see the efect of the operations, you might have to add some new data to the table before executing the operation.
+Delete computer, where id is 5
+Delete computer, where id is 2
+Delete all computers, where name is BigFlop Mark II
+Delete all computers, where amount is 7 or processor is Brain 456
+Delete all computers, where name is BigFlop Mark II or amount is 100 or processor is X-Force
+5 Submit the project
+Submit your project folder Aryal_Sagar_computer_project acording to instructions given separately.
