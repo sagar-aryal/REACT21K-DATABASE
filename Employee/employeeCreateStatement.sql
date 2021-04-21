@@ -23,6 +23,6 @@ insert into employeeDb.employee values(5, 'Layla', 'Ocean', 'ict', 4400);
 insert into employeeDb.employee values(6, 'Jesse', 'Smith', null , null);
 insert into employeeDb.employee (employeeId, firstname, lastname) values(7, 'Vera', 'Jones');
 insert into employeeDb.employee (employeeId, firstname, lastname, department) values(8, 'Felix', 'Jones', 'admin');
-insert into employeeDb.employee (employeeId, firstname, lastname, salary) values(9, 'Amanda', 'Jones', 9000 );
+insert into employeeDb.employee (employeeId, firstname, lastname, salary) values(9, 'Amanda', 'Jones', 900);
 
 
