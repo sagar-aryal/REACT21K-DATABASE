@@ -1,5 +1,6 @@
 drop database if exists employeeDb;
 create database employeeDb;
+use employeeDb;
 
 create table employee (
     employeeId INTEGER NOT NULL PRIMARY KEY,
