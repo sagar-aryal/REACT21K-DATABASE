@@ -1,0 +1,24 @@
+use companydb;
+
+select * from department;
+select * from employee;
+select salary from employee where firstname = 'Mary' and lastname = 'River';
+select departmentName from employee, department where departmentNumber = departmentId;
+select departmentName from employee, department where departmentNumber = departmentId and firstname = 'Mary';
+select departmentName, departmentFloor from employee join department on employee.departmentNumber=department.departmentId where firstname="Mary";
+select * from employee join department on employee.departmentNumber=department.departmentId where firstname="Mary";
+select * from employee join department on employee.departmentNumber=departmentId;
+select * from employee join department on employee.departmentNumber=department.departmentId where departmentName="ict";
+select firstname, lastname, departmentName from department inner join employee on employee.departmentNumber=department.departmentId where departmentName="ict";
+select firstname, lastname, departmentFloor from department inner join employee on employee.departmentNumber=department.departmentId where firstname="Amanda";
+select firstname, departmentName, departmentFloor from department inner join employee on employee.departmentNumber=department.departmentId where firstname="Amanda";
+select firstname, lastname, departmentName, departmentFloor from department inner join employee on employee.departmentNumber=department.departmentId where lastname="River";
+select avg(salary) as 'ict avg' from employee where departmentNumber=1;
+select avg(salary) as 'ict avg' from employee join department on employee.departmentNumber=department.departmentId where departmentName="ict";
+select departmentName, min(salary) from department inner join employee on employee.departmentNumber=department.departmentId;
+select departmentName, salary from department inner join employee on employee.departmentNumber=department.departmentId where salary=(select min(salary) from employee);
+select firstname, lastname, departmentName, salary from department inner join employee on employee.departmentNumber=department.departmentId where salary >(select avg(salary) from employee);
+select firstname, lastname, departmentName, salary from department inner join employee on employee.departmentNumber=department.departmentId where salary >(select avg(salary) from employee) order by salary desc;
+select firstname, lastname, departmentName, salary, case when salary > (select avg(salary) from employee) then 'above avg' when salary <(select avg(salary) from employee) then 'below avg' else 'average' end as 'salary level' from employee join department on employee.departmentNumber = department.departmentId order by salary desc, lastname asc, firstname asc;
+select * from department join employee on employee.departmentNumber = department.departmentId;
+select * from department left join employee on employee.departmentNumber = department.departmentId;
