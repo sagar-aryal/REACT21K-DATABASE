@@ -23,9 +23,8 @@ select lastname, count(*) as amount from employee group by lastname having lastn
 select avg(salary) as average from employee;
 select avg(salary) as average, min(salary) as minimum, max(salary) as maximum from employee;
 select max(salary)-min(salary) as difference from employee;
-select firstname, lastname, salary, case
-    -> when salary > 6000 then 'Top Worker' else ' ' end as notes
-    -> from employee order by salary desc, lastname, firstname;
+select firstname, lastname, salary, case when salary > 6000 then 'Top Worker' else ' ' end as notes from employee order by salary desc, lastname, firstname;
+select firstname, lastname, salary, case when salary = (select min(salary) from employee) then 'min' when salary = (select max(salary) from employee) then 'max' when salary is null then 'missing' else ' ' end as minmax from employee order by lastname asc;
 
 
 
