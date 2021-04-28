@@ -1,7 +1,7 @@
 use computerdb;
 
 describe computer;
-select * from superhero;
+select * from computer;
 insert into computerdb.computer values(1, 'Intel', 'desktop', 6, 'Corei7');
 insert into computerdb.computer values(2, 'Macbook Pro', 'laptop', 1, 'Corei10');
 update computer set name = "Samsung" where id = 1;

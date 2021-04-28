@@ -10,10 +10,6 @@ create table computer (
     processor VARCHAR(13) NOT NULL
 );
 
-insert into computerdb.computer values(1, 'Intel', 'desktop', 6, 'Corei7');
-insert into computerdb.computer values(2, 'Macbook Pro', 'laptop', 1, 'Corei10');
-
-
 drop user if exists 'michael'@'localhost';
 create user 'michael'@'localhost' identified by 'iXGPFptO';
 
