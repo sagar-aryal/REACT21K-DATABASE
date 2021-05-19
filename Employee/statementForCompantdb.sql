@@ -22,3 +22,11 @@ select firstname, lastname, departmentName, salary from department inner join em
 select firstname, lastname, departmentName, salary, case when salary > (select avg(salary) from employee) then 'above avg' when salary <(select avg(salary) from employee) then 'below avg' else 'average' end as 'salary level' from employee join department on employee.departmentNumber = department.departmentId order by salary desc, lastname asc, firstname asc;
 select * from department join employee on employee.departmentNumber = department.departmentId;
 select * from department left join employee on employee.departmentNumber = department.departmentId;
+select departmentName, count(employeeId) as number_of_employees from department left join employee on department.departmentId=employee.departmentNumber group by departmentId;
+select departmentName, count(employeeId) as number_of_employees from department left join employee on department.departmentId=employee.departmentNumber group by departmentId order by departmentName asc;
+select departmentName, count(employeeId) as number_of_employees from department left join employee on department.departmentId=employee.departmentNumber group by departmentId order by number_of_employees asc;
+select departmentName, count(employeeId) as number_of_employees from department left join employee on department.departmentId=employee.departmentNumber group by departmentId having number_of_employees=0;
+select departmentName, count(employeeId) as number_of_employees from department left join employee on department.departmentId=employee.departmentNumber group by departmentId having number_of_employees > 0;
+select departmentName, count(employeeId) as number_of_employees from department left join employee on department.departmentId=employee.departmentNumber group by departmentId having number_of_employees > 1 order by number_of_employees asc;
+select departmentName, count(employeeId) as number_of_employees, min(salary) as min, max(salary) as max, avg(salary) as avg_salary from department left join employee on department.departmentId=employee.departmentNumber group by departmentId having number_of_employees>1 order by number_of_employees desc;
+select departmentName, sum(salary) as sum_of_salary from department join employee on department.departmentId=employee.departmentNumber group by departmentId;
