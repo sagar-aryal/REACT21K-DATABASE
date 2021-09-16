@@ -1,4 +1,4 @@
-# REACT21K_Database
+# REACT21K_DATABASE
 
 ## Description
 
